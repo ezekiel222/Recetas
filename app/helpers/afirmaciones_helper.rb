@@ -1,0 +1,2 @@
+module AfirmacionesHelper
+end

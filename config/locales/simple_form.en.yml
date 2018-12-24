@@ -1,0 +1,16 @@
+en:
+  simple_form:
+    labels:
+      defaults:
+        email: 'Email'
+        password: 'Contraseña'
+        new:
+          username: 'Choose a user name'
+    hints:
+      defaults:
+        email: 'User email to sign in.'
+        password: 'No special characters, please.'
+    placeholders:
+      defaults:
+        username: 'Your username'
+        password: '****'

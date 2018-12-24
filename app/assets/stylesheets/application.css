@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree
+ *= require_self
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+
+.nav-recetas{
+  background-color: #ffc107;
+}
+.nav-recetas a{
+  color: #343a40;
+}
+.nav-recetas a:hover{
+  color: gray;
+}
+#login-box {
+  position: relative;
+  margin: 15px auto 15px auto;
+  width: 330px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #ebebe0;
+  border-radius: 25px
+}
+
+
+#login-box input{
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+  text-align: center;
+}
+
+#login-box input {
+  border-bottom: 2px solid gray;
+  transition: 0.2s ease;
+}
+
+#login-box div.recetas{
+  width: 66%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#login-box div.recetas button{
+  margin-top: 20px;
+  font-family: "Roboto",sans-serif;
+  font-weight: 400;
+  border-radius: 50px;
+  width: 200px;
+  height: 50px;
+  background-color: #ffc107;
+  border-color: white;
+  border-style: none;
+}
+#login-box div.recetas button:hover{
+  background-color:  #ffc107a3;
+  cursor:pointer;
+}
+.registro{
+  width: 60%;
+  text-align: center;
+  margin: 200px auto;
+}
+.registro h1{
+  text-align: center;
+}
+.registro h2{
+  text-align: center;
+  color: gray
+}
+.registro button{
+  text-align: center;
+  width: 50%;
+  height: 50px;
+  margin-top: 30px;
+  border-style: none;
+  background-color: #ffc107;
+  border-radius: 10px;
+}
+.registro button:hover{
+  cursor: pointer;
+  background-color: #ffc107a3;
+}
