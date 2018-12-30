@@ -1,4 +1,4 @@
-<% @recipe = Recipe.all %>
+<% @recipe = Recipe.all.order("created_at DESC") %>
 <div id="todas">
   <div class="titulo">
     <h1>Todas las Recetas </h1>

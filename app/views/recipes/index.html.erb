@@ -2,7 +2,7 @@
   <div class="titulo">
     <h1>Mis Recetas</h1>
   </div>
-    <% @recipe = User.find(current_user.id).recipes %>
+    <% @recipe = User.find(current_user.id).recipes.order("created_at DESC") %>
     <% @recipe.each do |f| %>
     <div class="mostrar">
       <ol>
