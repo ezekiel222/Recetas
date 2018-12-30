@@ -1,24 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div id="receta">
+  <p id="notice"><%= notice %></p>
+  <div class="cuerpo">
 
-<p>
-  <strong>Titulo:</strong>
-  <%= @recipe.titulo %>
-</p>
-
-<p>
-  <strong>Cuerpo:</strong>
-  <%= @recipe.cuerpo %>
-</p>
-
-<p>
-  <strong>Categoria:</strong>
-  <%= @recipe.categoria_id %>
-</p>
-
-<p>
-  <strong>Usuario:</strong>
-  <%= @recipe.usuario_id %>
-</p>
-
-<%= link_to 'Edit', edit_recipe_path(@recipe) %> |
-<%= link_to 'Back', recipes_path %>
+    <div class="titulo">
+      <h1><%= @recipe.titulo %></h1>
+      <a href="#"><div class="categ">
+      <h6><%= @recipe.category.nombre %></h6><hr>
+      </div></a>
+      <a class="user" href="#"><br><h5><%= @recipe.user.nombre %> <%= @recipe.user.apellido %></h5><h6>-Ver mas recetas suyas</h6></a>
+    </div>
+    <div class="descript">
+      <br><br><h3>Descripcion:</h3>
+      <p><%= @recipe.descripcion %></p>
+    </div>
+    <div class="cuerpo-ingredientes">
+      <ol>
+        <div class="subtitulo">
+          <h3>Ingredientes</h3>
+        </div>
+        <% @ing = @recipe.ingredientes.split("\n")%>
+        <% @ing.each do |f| %>
+        <br><li>&#9733<%= f %></li>
+        <% end %>
+      </ol>
+    </div>
+    <div class="cuerpo-pasos">
+      <ol>
+        <div class="subtitulo">
+          <h3>Pasos</h3>
+        </div>
+        <% @pasos = @recipe.cuerpo.split("\n\r\n") %>
+        <% @pasos.each do |f| %>
+        <br><li><%= f %></li><br>
+        <% end %>
+      </ol>
+    </div>
+  </div>
+  </div>

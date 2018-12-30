@@ -17,7 +17,7 @@ class RecipesTest < ApplicationSystemTestCase
     fill_in "Categoria", with: @recipe.categoria_id
     fill_in "Cuerpo", with: @recipe.cuerpo
     fill_in "Titulo", with: @recipe.titulo
-    fill_in "Usuario", with: @recipe.usuario_id
+    fill_in "user", with: @recipe.user_id
     click_on "Create Recipe"
 
     assert_text "Recipe was successfully created"
@@ -31,7 +31,7 @@ class RecipesTest < ApplicationSystemTestCase
     fill_in "Categoria", with: @recipe.categoria_id
     fill_in "Cuerpo", with: @recipe.cuerpo
     fill_in "Titulo", with: @recipe.titulo
-    fill_in "Usuario", with: @recipe.usuario_id
+    fill_in "user", with: @recipe.user_id
     click_on "Update Recipe"
 
     assert_text "Recipe was successfully updated"

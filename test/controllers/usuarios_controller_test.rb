@@ -1,23 +1,23 @@
 require 'test_helper'
 
-class UsuariosControllerTest < ActionDispatch::IntegrationTest
+class usersControllerTest < ActionDispatch::IntegrationTest
   test "should get crear" do
-    get usuarios_crear_url
+    get users_crear_url
     assert_response :success
   end
 
   test "should get actualizar" do
-    get usuarios_actualizar_url
+    get users_actualizar_url
     assert_response :success
   end
 
   test "should get editar" do
-    get usuarios_editar_url
+    get users_editar_url
     assert_response :success
   end
 
   test "should get eliminar" do
-    get usuarios_eliminar_url
+    get users_eliminar_url
     assert_response :success
   end
 

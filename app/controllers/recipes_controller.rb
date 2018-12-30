@@ -5,6 +5,12 @@ class RecipesController < ApplicationController
   # GET /recipes.json
   def index
     @recipes = Recipe.all
+    if params[:category].blank?
+      @recipe = Recipe.all.order("created_at DESC")
+    else
+      @category_id = Category.find_by(nombre: params[:category]).id
+      @recipe = Recipe.where(category_id: @category_id).order("created_at DESC")
+    end
   end
 
   # GET /recipes/1
@@ -14,21 +20,22 @@ class RecipesController < ApplicationController
 
   # GET /recipes/new
   def new
-    @recipe = Recipe.new
+    @recipe = current_user.recipes.build
   end
 
   # GET /recipes/1/edit
   def edit
   end
 
+
   # POST /recipes
   # POST /recipes.json
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = current_user.recipes.build(recipe_params)
 
     respond_to do |format|
       if @recipe.save
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
+        format.html { redirect_to @recipe, notice: 'Su receta ha sido creada' }
         format.json { render :show, status: :created, location: @recipe }
       else
         format.html { render :new }
@@ -42,7 +49,7 @@ class RecipesController < ApplicationController
   def update
     respond_to do |format|
       if @recipe.update(recipe_params)
-        format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
+        format.html { redirect_to @recipe, notice: 'Su receta fue actualizada.' }
         format.json { render :show, status: :ok, location: @recipe }
       else
         format.html { render :edit }
@@ -56,7 +63,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe.destroy
     respond_to do |format|
-      format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
+      format.html { redirect_to recipes_url, notice: 'Se ha eliminado su receta.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +76,6 @@ class RecipesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:titulo, :cuerpo, :categoria_id, :usuario_id)
+      params.require(:recipe).permit(:titulo, :cuerpo, :ingredientes, :category_id, :user_id, :descripcion)
     end
 end

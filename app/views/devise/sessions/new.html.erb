@@ -1,20 +1,19 @@
-<h2>Log in</h2>
+<form class="simple_form new_user" id="new_user" novalidate="novalidate" action="/users/sign_in" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="2I0EQRyGlj1WvIAYEsZl/OelqtmY8Ex21SLXqfBCsOJ0usCj9MYFUj7c4wx3I63GM/HG/J/nnaqKqMtzFhKAHQ==">
+  <div id="login-box">
+    <div class="recetas-inicio">
+          <label class="email optional" for="user_email">Email</label>
+          <input autocomplete="email" class="string email optional" autofocus="autofocus" type="email" value="" name="user[email]" id="user_email">
+          <label class="password optional" for="user_password">Contraseña</label>
+          <input autocomplete="current-password" class="password optional" type="password" name="user[password]" id="user_password">
+        <div class="input boolean optional user_remember_me">
+          <input value="0" type="hidden" name="user[remember_me]">
+          <label class="boolean optional checkbox" for="user_remember_me">
+            <input class="boolean optional" type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">Recordarme</label>
+          </div>
+          <div class="form-actions">
+            <input type="submit" name="commit" value="Log in" class="btn" data-disable-with="Log in">
+          </div>
+      </div>
+      </div>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  </form>

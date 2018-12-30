@@ -1,4 +1,5 @@
 class Recipe < ApplicationRecord
-  belongs_to :usuario
-  belongs_to :category
+  has_many :line_items, inverse_of: :order
+  belongs_to :user, required: true
+  belongs_to :category, required: true
 end

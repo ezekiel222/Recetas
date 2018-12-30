@@ -1,21 +1,21 @@
-<form class="new_usuario" id="new_usuario" novalidate="novalidate" action="/usuarios" accept-charset="UTF-8" method="post">
-  <div class="form-group" id="login-box">
+<form class="new_user" id="new_user" novalidate="novalidate" action="/users" accept-charset="UTF-8" method="post">
+  <div class="form-group" id="registro-box">
     <div class="recetas">
-      <label for="usuario_nombre">Nombre</label>
-      <input type="text" name="usuario[nombre]" value="" id="usuario_nombre" autocomplete="usuario-nombre">
+      <label for="user_nombre">Nombre</label>
+      <input type="text"  autofocus="autofocus"  name="user[nombre]" value="" id="user_nombre" autocomplete="user-nombre">
 
-      <label for="usuario_apellido">Apellido</label>
-      <input type="text" name="usuario[apellido]" value="" id="usuario_apellido">
+      <label for="user_apellido">Apellido</label>
+      <input type="text" name="user[apellido]" value="" id="user_apellido">
 
-      <label class="email required" for="usuario_email"> Email*</label><br>
-      <input autocomplete="email" class="string email required" autofocus="autofocus" required="required" type="email" value="" name="usuario[email]" id="usuario_email"><br>
+      <label class="email required" for="user_email"> Email*</label><br>
+      <input autocomplete="email" class="string email required" required="required" type="email" value="" name="user[email]" id="user_email"><br>
 
-      <label class="password required" for="usuario_password">Contraseña*</label>
-      <input autocomplete="new-password" class="string password required" required="required" type="password" value="" name="usuario[password]" id="usuario_password" pattern=".{6,}" >
+      <label class="password required" for="user_password">Contraseña*</label>
+      <input autocomplete="new-password" class="string password required" required="required" type="password" value="" name="user[password]" id="user_password" pattern=".{6,}" >
 
-      <label class="password required" for="usuario_password_confirmation">Confirmar contraseña*</label>
-      <input autocomplete="new-password" class="string password_confirmation required" required="required" type="password" value="" name="usuario[password_confirmation]" id="usuario_password_confirmation" pattern=".{6,}">
+      <label class="password required" for="user_password_confirmation">Confirmar contraseña*</label>
+      <input autocomplete="new-password" class="string password_confirmation required" required="required" type="password" value="" name="user[password_confirmation]" id="user_password_confirmation" pattern=".{6,}">
 
-      <button type="submit" name="registrarse">Registrarse</button>
+      <button class="registro" type="submit" name="registrarse">Registrarse</button>
     </div>
   </div>

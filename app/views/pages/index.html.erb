@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Recetas</title>
-  </head>
-  <body>
-  
-  </body>
-</html>
+<% if ! current_user %>
+<div class="cover-container1 d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Recetas Dee</h1>
+    <p class="lead">Todas tus recetas en una sola página.<br>
+    Comienza a guardar y compartir todas tur recetas con un solo click!</p>
+    <p><%= link_to "Registrarse" ,new_user_registration_path %></p><br>
+    <p class="lead">Ya estas registrado?</p>
+    <p><%= link_to "Iniciar Sesion", new_user_session_path %></p>
+  </main>
+</div>
+<% else %>
+<div class="cover-container2 d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Recetas Dee</h1>
+    <p class="lead">Busque su receta.<br>
+    </p><br>
+    <div class="re">
+      <%= link_to "Todas" ,pages_recetas_path, class:'recet' %>&nbsp &nbsp &nbsp &nbsp &nbsp
+      <%= link_to "Categorias" ,categories_path, class:'recet' %>&nbsp &nbsp &nbsp &nbsp &nbsp
+      <%= link_to "Recientes" ,pages_ultimas_path, class:'recet' %>
+    </div>
+  </main>
+</div>
+  <% end %>
+</div>

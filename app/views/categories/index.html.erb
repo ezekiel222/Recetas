@@ -1,0 +1,10 @@
+<div id="categorias">
+  <div class="titulo">
+    <h1>Categorias</h1>
+  </div>
+  <div class="categs">
+    <% @categories.each do |f| %>
+    <%= link_to f.nombre, f, class:"boton" %>
+    <% end %>
+  </div>
+</div>

@@ -4,10 +4,10 @@ one:
   titulo: MyString
   cuerpo: MyText
   categoria_id: 1
-  usuario_id: 1
+  user_id: 1
 
 two:
   titulo: MyString
   cuerpo: MyText
   categoria_id: 1
-  usuario_id: 1
+  user_id: 1

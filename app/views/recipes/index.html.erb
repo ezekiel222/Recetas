@@ -1,33 +1,16 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Recipes</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Titulo</th>
-      <th>Cuerpo</th>
-      <th>Categoria</th>
-      <th>Usuario</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.titulo %></td>
-        <td><%= recipe.cuerpo %></td>
-        <td><%= recipe.categoria_id %></td>
-        <td><%= recipe.usuario_id %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div id="todas">
+  <div class="titulo">
+    <h1>Mis Recetas</h1>
+  </div>
+    <% @recipe = User.find(current_user.id).recipes %>
+    <% @recipe.each do |f| %>
+    <div class="mostrar">
+      <ol>
+      <li class="title"><h2><%=link_to f.titulo, f, class:'tit'%></h2></li>
+      <li class="categ"><h5><%= f.category.nombre %></h5></li>
+      <li class="user"><h6><%= f.user.nombre %> <%= f.user.apellido %></h6></li>
+      <li class="descript"><p><%= truncate (f.descripcion), length: 5000 %></p></li>
+      </ol>
+    </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+</div>

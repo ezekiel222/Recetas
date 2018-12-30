@@ -1,16 +1,51 @@
+<form class="new_recipe" id="new_recipe" action="/recipes" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Iek7j0ritBrmvqOR1XO+72lZWlweFL71IWAvT2XKDGsu6/67188cLtrdDno8GcU8Ov53EOqYDpuKcZOCqQw9LA==">
+     <div id="articulo">
+     <br><br><label for="recipe_titulo">Titulo:</label><br>
+     <input type="text" name="recipe[titulo]" id="recipe_titulo" autocomplete="off"><br><br>
+         <select name="recipe[category_id]" id="recipe_category_id"><option value="">Elegir Categoria</option><
+           <option value="1">Postres</option>
+           <option value="2">Carnes</option>
+           <option value="3">Pescados/Mariscos</option>
+           <option value="4">Salsas</option>
+           <option value="5">Pastas</option>
+           <option value="6">Ensaladas</option>
+           <option value="7">Frituras</option>
+           <option value="8">Vegetarianas</option>
+           <option value="9">Aves</option>
+           <option value="10">Bebidas</option>
+           <option value="11">Sopas</option></select><br>
 
-<%= simple_form_for(@recipe) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+          <br><br><label for="recipe_descripcion">Descripcion:</label>
+          <textarea name="recipe[descripcion]" id="recipe_descripcion" rows="4" cols="80"></textarea>
+         <br><br><label for="recipe_ingredientes">Ingredientes:</label><br>
+         <textarea class="ingredientes" name="recipe[ingredientes]" id="recipe_ingredientes" rows="8" cols="45"
+placeholder="*SEPARAR INGREDIENTES CON 'enter'*
+1° ingrediente
+2° ingrediente
+3° ingrediente
+4° ingrediente
+..."></textarea><br><br>
 
-  <div class="form-inputs">
-    <%= f.input :titulo %>
-    <%= f.input :cuerpo %>
-    <%= f.input :categoria_id %>
-    <%= f.input :usuario_id %>
-  </div>
+          <label for="recipe_cuerpo">Pasos:</label><br>
+         <textarea class="pasos" style="list" name="recipe[cuerpo]" id="recipe_cuerpo" rows="20" cols="120"
+placeholder="*SEPARAR CADA PASO CON 2 'enter'*
+Primer paso
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+Segundo paso
+
+Tercer paso
+
+Cuarto paso
+
+Quinto paso
+
+Sexto paso
+
+Septimo paso
+
+Octavo paso
+
+..."></textarea><br>
+         <input type="submit" name="commit" value="Crear Receta" data-disable-with="Create Recipe" style="margin-left:550px">
+       </div>
+</form>
