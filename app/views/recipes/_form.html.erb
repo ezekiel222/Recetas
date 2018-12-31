@@ -1,4 +1,4 @@
-<form class="new_recipe" id="new_recipe" novalidate="novalidate" action="/recipes" accept-charset="UTF-8" method="post" accept-charset="UTF-8">
+<form class="new_recipe" id="new_recipe" novalidate="novalidate" enctype="multipart/form-data" action="/recipes" accept-charset="UTF-8" method="post" accept-charset="UTF-8">
   <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Iek7j0ritBrmvqOR1XO+72lZWlweFL71IWAvT2XKDGsu6/67188cLtrdDno8GcU8Ov53EOqYDpuKcZOCqQw9LA==">
      <div id="articulo">
      <br><br><label for="recipe_titulo">Titulo:</label><br>
@@ -20,7 +20,7 @@
           <textarea name="recipe[descripcion]" id="recipe_descripcion" rows="4" cols="80"></textarea>
          <br><br><label for="recipe_ingredientes">Ingredientes:</label><br>
          <textarea class="ingredientes" name="recipe[ingredientes]" id="recipe_ingredientes" rows="8" cols="45"
-placeholder="*SEPARAR INGREDIENTES CON 'enter'*
+placeholder="*SEPARAR INGREDIENTES CON 1 'enter'*
 1° ingrediente
 2° ingrediente
 3° ingrediente
@@ -28,25 +28,20 @@ placeholder="*SEPARAR INGREDIENTES CON 'enter'*
 ..."></textarea><br><br>
 
           <label for="recipe_cuerpo">Pasos:</label><br>
-         <textarea class="pasos" style="list" name="recipe[cuerpo]" id="recipe_cuerpo" rows="20" cols="120"
-placeholder="*SEPARAR CADA PASO CON 2 'enter'*
+         <textarea class="pasos" style="list" name="recipe[cuerpo]" id="recipe_cuerpo" rows="10" cols="120"
+placeholder="*SEPARAR CADA PASO CON 1 'enter'*
 Primer paso
-
 Segundo paso
-
 Tercer paso
-
 Cuarto paso
-
 Quinto paso
-
 Sexto paso
-
 Septimo paso
-
 Octavo paso
-
 ..."></textarea><br>
+        <div class="field">
+            <input type="file" name="recipe[photo]" value="" id="recipe_photo">
+          </div>
          <input type="submit" name="commit" value="Crear Receta" data-disable-with="Create Recipe" style="margin-left:550px">
        </div>
 </form>

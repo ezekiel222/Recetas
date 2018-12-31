@@ -9,6 +9,9 @@
       </div></a>
       <a class="user" href="#"><br><h5><%= @recipe.user.nombre %> <%= @recipe.user.apellido %></h5><h6>-Ver mas recetas suyas</h6></a>
     </div>
+    <% if @recipe.photo.present? %>
+  <p style="text-align:center"><%= image_tag @recipe.photo.url(:medium) %></p>
+  <% end %>
     <div class="descript">
       <br><br><h3>Descripcion:</h3>
       <p><%= @recipe.descripcion %></p>
@@ -29,7 +32,7 @@
         <div class="subtitulo">
           <h3>Pasos</h3>
         </div>
-        <% @pasos = @recipe.cuerpo.split("\n\r\n") %>
+        <% @pasos = @recipe.cuerpo.split("\n") %>
         <% @pasos.each do |f| %>
         <br><li><%= f %></li><br>
         <% end %>
