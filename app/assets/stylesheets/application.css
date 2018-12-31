@@ -352,12 +352,12 @@ input[type="submit"]:hover{
   margin-top: 45px;
   text-align: justify;
 }
-#receta a.user h6{
+#receta a.user{
   margin-left: 20px;
   color: gray;
   font-size: 10px
 }
-#receta a.user h5, h6{
+#receta a.user h5, a{
   display: inline;
 }
 #receta a.user{
@@ -365,14 +365,15 @@ input[type="submit"]:hover{
   color: inherit;
   background-color: inherit;
 }
+#receta a.user:hover{
+  cursor: pointer;
+  color: black
+}
 #receta a.user h5:hover{
   cursor: inherit;
   background-color: inherit;
 }
-#receta a.user h6:hover{
-  cursor: pointer;
-  color: black
-}
+
 #receta .cuerpo .cuerpo-pasos{
   margin-top: 45px;
 }

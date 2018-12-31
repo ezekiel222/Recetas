@@ -4,10 +4,8 @@
 
     <div class="titulo">
       <h1><%= @recipe.titulo %></h1>
-      <a href="#"><div class="categ">
-      <h6><%= @recipe.category.nombre %></h6><hr>
-      </div></a>
-      <a class="user" href="#"><br><h5><%= @recipe.user.nombre %> <%= @recipe.user.apellido %></h5><h6>-Ver mas recetas suyas</h6></a>
+      <h6><%= link_to @recipe.category.nombre, @recipe.category, class:"categ" %></h6><hr>
+      <br><h5><%= @recipe.user.nombre %> <%= @recipe.user.apellido %></h5><h6><%= link_to "ver mas recetas suyas", @recipe.user, class:'user' %></h6>
     </div>
     <% if @recipe.photo.present? %>
   <p style="text-align:center"><%= image_tag @recipe.photo.url(:medium) %></p>

@@ -10,6 +10,7 @@
       <li class="categ"><h5><%= f.category.nombre %></h5></li>
       <li class="user"><h6><%= f.user.nombre %> <%= f.user.apellido %></h6></li>
       <li class="descript"><p><%= truncate (f.descripcion), length: 5000 %></p></li>
+      <li class="user"><h6><%= link_to "Eliminar",recipe_path(f), :method => 'delete', data: {confirm: 'Seguro que desea eliminar la receta?'} %></h6></li>
       </ol>
     </div>
     <% end %>
