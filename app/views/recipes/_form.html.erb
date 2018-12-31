@@ -1,5 +1,5 @@
 <form class="new_recipe" id="new_recipe" novalidate="novalidate" enctype="multipart/form-data" action="/recipes" accept-charset="UTF-8" method="post" accept-charset="UTF-8">
-  <input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Iek7j0ritBrmvqOR1XO+72lZWlweFL71IWAvT2XKDGsu6/67188cLtrdDno8GcU8Ov53EOqYDpuKcZOCqQw9LA==">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
      <div id="articulo">
      <br><br><label for="recipe_titulo">Titulo:</label><br>
      <input type="text" name="recipe[titulo]" id="recipe_titulo" autocomplete="off"><br><br>
