@@ -24,7 +24,7 @@ position: -webkit-sticky;">
             <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <%= current_user.nombre %> <%= current_user.apellido %>
         </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; left: -49.5px; border:none; top:46px">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
         <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %><hr>
         <%= link_to "Cerrar Sesion", destroy_user_session_path, class:'dropdown-item1', :method => 'delete' %>
       </div>
