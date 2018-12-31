@@ -9,7 +9,7 @@
     <li class="title"><h2><%=link_to f.titulo, f, class:'tit'%></h2></li>
     <li class="categ"><h5><%= f.category.nombre %></h5></li>
     <li class="user"><h6><%= f.user.nombre %> <%= f.user.apellido %></h6><% if f.photo.present? %>
-    <%= image_tag f.photo.url(:thumb), style:"margin-left:85%" %>
+    <%= image_tag f.photo.url(:thumb), style:"margin-left:50%; margin-right:auto" %>
   <% end %></li>
     <li class="descript"><p><%= truncate (f.descripcion), length: 5000 %></p></li>
     </ol>

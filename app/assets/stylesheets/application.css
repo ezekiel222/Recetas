@@ -126,7 +126,7 @@ a.dropdown-item1:hover{
 }
 .registro button{
   text-align: center;
-  width: 50%;
+  width: 60%;
   height: 50px;
   margin-top: 30px;
   border-style: none;
@@ -231,7 +231,7 @@ input[type="submit"]:hover{
   margin: auto;
   width: 100%;
   padding-bottom: 70px;
-  padding-left: 50px;
+  padding-left: 2.19%;
   font-weight: bold;
   display: inline-grid;
   background-color: transparent;
@@ -240,7 +240,7 @@ input[type="submit"]:hover{
   background-color: #fff;
   border-radius: 20px;
   height: 40px;
-  width: 400px;
+  width: 60.08%;
   outline: none;
   padding: 10px
 }
@@ -262,7 +262,7 @@ input[type="submit"]:hover{
   box-sizing: border-box;
   margin-bottom: 20px;
   padding: 4px;
-  width: 600px;
+  width: 98.12%;
   height: 60px;
   border: none;
   border-bottom: 1px solid gray;
@@ -280,8 +280,6 @@ input[type="submit"]:hover{
   background-color: #fff;
 }
 #articulo textarea{
-
-  resize: none;
   outline: none;
   font-style: oblique;
   font-family: sans-serif;
@@ -304,23 +302,25 @@ input[type="submit"]:hover{
 }
 
 #receta{
-  margin-top: -20px;
+  margin-left: -2.35%;
+  margin-top: -40px;
   display: block;
   background-color: #ffc10721;
 }
 #receta .titulo h1{
-  padding-left: 20px;
-  padding-top: 20px;
+  padding-left: 2.35%;
+  padding-top: 1%;
   font-weight: 800;
+  margin-bottom: 5%;
   color: #e68a00
 }
 #receta .titulo h5{
-  padding-left: 20px;
+  padding-left: 2.35%;
   color: gray;
   font-size: 15px
 }
 .categ{
-  margin-left: 20px
+  padding-left: 2.35%
 }
 #receta .cuerpo a{
   width: 100%;
@@ -336,11 +336,12 @@ input[type="submit"]:hover{
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
+  padding-left: -2.35%;
   font-family: "Arial", sans-serif;
-  width: 1000px;
+  width: 100%;
 }
 #receta .cuerpo ol{
-  margin-left: -20px;
+  margin-left: 0;
   list-style-type: none;
   counter-reset: numList;
 }
@@ -353,7 +354,7 @@ input[type="submit"]:hover{
   text-align: justify;
 }
 #receta a.user{
-  margin-left: 20px;
+  margin-left: 2.35%;
   color: gray;
   font-size: 10px
 }
@@ -412,9 +413,12 @@ input[type="submit"]:hover{
   font-size: 16px;
   font-weight: bolder;
 }
-.descript{
+#receta .cuerpo .descript{
   font-family: "Arial", sans-serif;
-  padding-left: 20px
+}
+.descript{
+  margin-left: 40px;
+  text-align: justify;
 }
 .descript h3{
   color: #a9aaab;
@@ -445,7 +449,7 @@ input[type="submit"]:hover{
   display: table;
   width: 95%;
   padding: 20px;
-  margin-left: 30px;
+  margin-left: auto;
   margin-right: auto;
   border: 1px solid white;
   border-radius: 30px
@@ -474,7 +478,7 @@ input[type="submit"]:hover{
   color: gray;
 }
 #todas .mostrar li.descript p{
-  margin-left: -20px;
+
   font-size: 16px;
   font-weight: 600;
 }
@@ -486,7 +490,7 @@ input[type="submit"]:hover{
   text-align: center;
   display: run-in;
   list-style: none;
-  width: 1180px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -497,12 +501,12 @@ input[type="submit"]:hover{
   display: inline-block;
   padding: 10px;
   margin: 20px 10px 30px 10px;
-  width: 320px;
+  width: 50%;
   background-color: #ffc107;
   border-radius: 30px;
 }
 #categorias a.boton{
-  width: 360px;
+  width: 50%;
   display: inline-block;
   text-decoration: none;
   color: black;
@@ -518,7 +522,7 @@ input[type="submit"]:hover{
   text-align: center;
 }
 main{
-  margin-top: 170px;
+  margin-top: 100px;
 }
 main a{
   font-weight: bolder;
@@ -539,10 +543,10 @@ main .re{
 }
 main .re a{
     font-weight: 500;
-    width: 50px;
+    width: 6%;
     padding: 0.5%;
     color: #ffc107;
-    font-size: 25pt;
+    font-size: 120%;
 
 }
 main .re a.recet:hover{
