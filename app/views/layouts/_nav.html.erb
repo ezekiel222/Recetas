@@ -1,34 +1,34 @@
-<header class="navbar navbar-expand-lg nav-recetas lex-column flex-md-row bd-navbar", style="position:sticky;top: 0;
+<header class="navbar navbar-expand nav-recetas flex-column flex-md-row bd-navbar", style="position:sticky;top: 0;
 position: -webkit-sticky;">
     <a class="navbar-brand" href="/">Foié</a>
-    <ul class="navbar-nav">
-    </ul>
-      <% if ! current_user %>
-      <ul class="navbar-nav">
+    <div class="navbar-nav-scroll">
+        <ul class="navbar-nav bd-navbar-nav flex-row">
+          <% if ! current_user %>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/u/sign_up">Registrarse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/u/sign_in">Iniciar sesion</a>
-        </li>
-      </ul>
-      <% end %>
-        <% if current_user %>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <%= link_to "Receta Nueva", new_recipe_path, class:'nav-link' %>
-          </li>
-          <li class="nav-item dropdown" style="text-align:center">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= current_user.nombre %> <%= current_user.apellido %>
-        </a>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
-        <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %><hr>
-        <%= link_to "Cerrar Sesion", destroy_user_session_path, class:'dropdown-item1', :method => 'delete' %>
-      </div>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/u/sign_up">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/u/sign_in">Iniciar sesion</a>
+            </li>
+          <% end %>
+            <% if current_user %>
+
+              <li class="nav-item">
+                <%= link_to "Receta Nueva", new_recipe_path, class:'nav-link' %>
+              </li>
+              <li class="nav-item dropdown" style="text-align:center">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.nombre %> <%= current_user.apellido %>
+            </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
+            <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %><hr>
+            <%= link_to "Cerrar Sesion", destroy_user_session_path, class:'dropdown-item1', :method => 'delete' %>
+          </div>
+              </li>
+
+          <% end %>
         </ul>
-      <% end %>
+    </div>
 
 </header>
