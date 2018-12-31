@@ -454,6 +454,9 @@ input[type="submit"]:hover{
   margin-left: -40px;
   margin-left: 0px;
 }
+#todas .mostrar li.user{
+  display: flex;
+}
 #todas .mostrar li.title a.tit{
   font-weight: bolder;
   color: #e68a00
