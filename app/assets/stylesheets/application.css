@@ -115,12 +115,13 @@ a.dropdown-item1:hover{
 .registro{
   width: 60%;
   text-align: center;
-  margin: 160px auto auto;
+  margin: 200px auto auto auto;
+}
+.registro h1{
+  text-align: center;
 }
 .registro h2{
-
-}
-.registro h3{
+  text-align: center;
   color: gray
 }
 .registro button{
