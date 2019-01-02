@@ -5,6 +5,7 @@ class Recipe < ApplicationRecord
   has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100>" },
   :s3_protocol => 'https',
   :s3_host_name => ENV['S3_HOST_NAME'],
+  :url => ":s3_domain_url",
   :path => ENV['S3_PATH'],
   :storage => 's3',
   :s3_region => ENV['S3_REGION']
