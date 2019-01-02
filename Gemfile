@@ -42,7 +42,7 @@ gem 'font-awesome-sass', '~> 5.6.1'
 gem 'bootstrap-sass-extras'
 gem 'carrierwave', '~> 0.11.2'
 gem 'paperclip'
-gem 'imagemagick-identify', '~> 0.0.1'
+gem 'imagemagick-identify'
 gem 'figaro'
 gem 'aws-sdk-s3'
 
