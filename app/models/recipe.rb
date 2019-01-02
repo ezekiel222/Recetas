@@ -9,5 +9,5 @@ class Recipe < ApplicationRecord
   :path => ENV['S3_PATH'],
   :storage => 's3',
   :s3_region => ENV['S3_REGION']
-  validates_attachment_content_type :attachment, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 end
