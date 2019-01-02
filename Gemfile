@@ -43,6 +43,8 @@ gem 'bootstrap-sass-extras'
 gem 'carrierwave', '~> 0.11.2'
 gem 'paperclip'
 gem 'imagemagick-identify', '~> 0.0.1'
+gem 'figaro'
+gem 'aws-sdk-s3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
