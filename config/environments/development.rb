@@ -1,5 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+<<<<<<< HEAD
+=======
+  Paperclip.options[:command_path] = "/usr/bin"
+>>>>>>> 270389b0e6058dcddd62bea0c6df2b071e3dc0f8
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
