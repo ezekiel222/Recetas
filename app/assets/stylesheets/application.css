@@ -113,6 +113,7 @@ a.dropdown-item1:hover{
   cursor:pointer;
 }
 .registro{
+  display: table;
   width: 60%;
   text-align: center;
   margin: 200px auto auto auto;
