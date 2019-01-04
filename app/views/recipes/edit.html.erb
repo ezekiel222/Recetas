@@ -1,6 +1,22 @@
-<h1>Editing Recipe</h1>
+<%= form_for @recipe do |f| %>
+  <div id="articulo">
+    <%= f.label 'Titulo' %><br>
+    <%= f.text_field :titulo %><br>
 
-<%= render 'form', recipe: @recipe %>
+    <%= f.label 'Descripcion' %><br>
+    <%= f.text_area :descripcion %><br>
 
-<%= link_to 'Show', @recipe %> |
-<%= link_to 'Back', recipes_path %>
+    <%= f.label 'Ingredientes' %><br>
+    <%= f.text_area :ingredientes%><br>
+
+    <%= f.label 'Pasos' %><br>
+    <%= f.text_area :cuerpo %><br>
+
+    <div class="field">
+      <label for="recipe_photo">Ignorar si ya hay foto</label><br>
+        <input type="file" name="recipe[photo]" value="Foto" id="recipe_photo">
+      </div>
+
+    <%= f.submit "Editar", style:"margin-left:20%" %>
+  </div>
+<% end %>
