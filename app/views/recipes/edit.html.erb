@@ -12,6 +12,11 @@
     <%= f.label 'Pasos' %><br>
     <%= f.text_area :cuerpo %><br>
 
+    <div class="field">
+      <%= f.label "Foto (ignorar si ya la hay)" %>
+      <%= f.file_field :photo %>
+    </div>
+
     <%= f.submit "Editar", style:"margin-left:20%" %>
   </div>
 <% end %>
