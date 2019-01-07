@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy, :favorite]
 
   # GET /recipes
   # GET /recipes.json
@@ -10,6 +10,24 @@ class RecipesController < ApplicationController
     else
       @category_id = Category.find_by(nombre: params[:category]).id
       @recipe = Recipe.where(category_id: @category_id).order("created_at DESC")
+    end
+  end
+
+  # Add and remove favorite recipes
+  # for current_user
+  def favorite
+    type = params[:type]
+    if type == "favorite"
+      current_user.favorites << @recipe
+      redirect_back fallback_location: root_path, notice: 'You favorited #{@recipe.name}'
+
+    elsif type == "unfavorite"
+      current_user.favorites.delete(@recipe)
+      redirect_back fallback_location: root_path, notice: 'Unfavorited #{@recipe.name}'
+
+    else
+      # Type missing, nothing happens
+      redirect_to :back, notice: 'Nothing happened.'
     end
   end
 

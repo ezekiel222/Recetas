@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :recipes
+  resources :recipes do
+    put :favorite, on: :member
+  end
   resources :categories
   resources :users
   devise_for :users, :controllers => {registrations:'registrations'}, :path => 'u'
@@ -8,4 +10,5 @@ Rails.application.routes.draw do
   get 'afirmaciones/registro'
   get 'pages/recetas'
   get 'pages/ultimas'
+  get 'pages/favoritas'
 end

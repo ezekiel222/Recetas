@@ -22,7 +22,8 @@ position: -webkit-sticky;">
               <%= current_user.nombre %> <%= current_user.apellido %>
             </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
-            <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %><hr>
+            <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %>
+            <%= link_to "Mis Favoritas", pages_favoritas_path, class:'dropdown-item1' %><hr>
             <%= link_to "Cerrar Sesion", destroy_user_session_path, class:'dropdown-item1', :method => 'delete' %>
           </div>
               </li>

@@ -5,4 +5,6 @@ class PagesController < ApplicationController
   end
   def ultimas
   end
+  def favoritas
+  end
 end
