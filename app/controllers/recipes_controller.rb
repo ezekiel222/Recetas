@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
     type = params[:type]
     if type == "favorite"
       current_user.favorites << @recipe
-      redirect_back fallback_location: root_path, notice: 'You favorited #{@recipe.name}'
+      redirect_back fallback_location: pages_favoritas_path, notice: 'You favorited #{@recipe.name}'
 
     elsif type == "unfavorite"
       current_user.favorites.delete(@recipe)
