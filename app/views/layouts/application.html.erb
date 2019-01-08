@@ -18,9 +18,15 @@
     })(window,document,'script','dataLayer','GTM-MNTGR4K');</script>
 <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width">
-    <title>Foie</title>
+    <title><%= if content_for?(:titulo) then yield(:titulo) + ' | ' end %>
+      Foie</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name='description'
+      content='<%= yield_meta_tag(:description, 'Todas las recetas en una sola pagina web, Subi tus recetas y compartilas para que todos la vean, o simplemente busca la receta que queres!!') %>' />
+    <meta name='keywords'
+      content='<%= yield_meta_tag(:keywords, 'recetas,receta,foie,comida,rico,delicioso,como,hacer,cocina,trucos,ingredientes,pasos,defaults') %>' />
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

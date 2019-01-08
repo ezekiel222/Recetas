@@ -1,3 +1,6 @@
+<% content_for :titulo, @recipe.titulo %>
+<% meta_tag :description, @recipe.descripcion %>
+<% meta_tag :keywords, @recipe.titulo.split.join(',') %>
 <div id="receta">
   <p id="notice"><%= notice %></p>
   <div class="cuerpo">
