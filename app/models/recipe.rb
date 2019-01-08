@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
   def self.search(titulo)
   if titulo
-    where('titulo LIKE ?', "#{titulo}")
+    where('titulo like ?', "%#{titulo}%")
   else
     all
   end
