@@ -17,6 +17,8 @@
       <label class="password required" for="user_password_confirmation">Confirmar contraseña*</label>
       <input autocomplete="new-password" class="string password_confirmation required" required="required" type="password" value="" name="user[password_confirmation]" id="user_password_confirmation" pattern=".{6,}">
 
-      <button class="registro" type="submit" name="registrarse">Registrarse</button>
+      <button class="registro" type="submit" name="registrarse">Registrarse</button><br>
+
+      <p>Ya estas registrado? <br><%= link_to "Inicia Sesion", new_user_session_path %></p>
     </div>
   </div>
