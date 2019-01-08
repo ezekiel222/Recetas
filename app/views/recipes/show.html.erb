@@ -10,6 +10,8 @@
   <p style="text-align:center"><%= image_tag @recipe.photo.url(:medium) %></p>
   <% end %>
     <div class="descript">
+      <% @fav = @recipe.favorited_by.length %>
+      <strong>&#9733 <%= @fav %></strong>
       <br><br><h3>Descripcion:</h3>
       <p><%= @recipe.descripcion %></p>
     </div>
