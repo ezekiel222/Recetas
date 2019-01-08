@@ -553,3 +553,19 @@ main .re a.recet:hover{
     text-decoration: none;
     color: #ffc1079c;
 }
+
+.busqueda{
+  width: 100%;
+  text-align: center;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  margin-bottom: 5%
+}
+
+.busqueda .busc{
+  text-align: center;
+  width: 60%;
+  border-radius: 5px;
+  color: gray;
+  border-color: #00000014;
+}

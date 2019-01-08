@@ -15,8 +15,14 @@
     <h1 class="cover-heading">Foie</h1>
     <p class="lead">Busque su receta.<br>
     </p><br>
+    <div class="busqueda">
+      <%= form_tag(recipes_path, :method => 'get', class:"my-2 my-lg-0") do %>
+      <%= text_field_tag :titulo, params[:titulo], class:" busc mr-sm-2", placeholder:"Busca tu receta" %>
+      <%= submit_tag 'Buscar', name: nil, class:"my-2 my-sm-0", style:"width: inherit; background-color:inherit;" %>
+      <% end %>
+    </div>
     <div class="re">
-      <%= link_to "Todas" ,pages_recetas_path, class:'recet' %>&nbsp &nbsp &nbsp &nbsp &nbsp
+      <%= link_to "Todas" ,recipes_path, class:'recet' %>&nbsp &nbsp &nbsp &nbsp &nbsp
       <%= link_to "Categorias" ,categories_path, class:'recet' %>&nbsp &nbsp &nbsp &nbsp &nbsp
       <%= link_to "Recientes" ,pages_ultimas_path, class:'recet' %>
     </div>

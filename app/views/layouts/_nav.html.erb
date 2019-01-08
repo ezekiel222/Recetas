@@ -9,7 +9,7 @@ position: -webkit-sticky;">
           Buscar Receta
         </a>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
-        <%= link_to "Todas", pages_recetas_path, class:'dropdown-item1' %>
+        <%= link_to "Todas", recipes_path, class:'dropdown-item1' %>
         <%= link_to "Categorias", pages_ultimas_path, class:'dropdown-item1' %>
         <%= link_to "Recientes", categories_path, class:'dropdown-item1' %>
             <li class="nav-item">
@@ -26,12 +26,11 @@ position: -webkit-sticky;">
               <%= current_user.nombre %> <%= current_user.apellido %>
             </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color: white; border:none; top:46px">
-            <%= link_to "Mis Recetas", recipes_path, class:'dropdown-item1' %>
+            <%= link_to "Mis Recetas", pages_recetas_path, class:'dropdown-item1' %>
             <%= link_to "Mis Favoritas", pages_favoritas_path, class:'dropdown-item1' %><hr>
             <%= link_to "Cerrar Sesion", destroy_user_session_path, class:'dropdown-item1', :method => 'delete' %>
           </div>
-              </li>
-
+          </li>
           <% end %>
         </ul>
     </div>

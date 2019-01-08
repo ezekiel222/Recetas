@@ -1,18 +1,33 @@
-<% @recipe = Recipe.all.order("created_at DESC") %>
+<% @rec = User.find(current_user.id).recipes %>
+<% if @rec.count == 0 %>
+<div class="cover-container2 d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <main class="inner cover">
+    <h1 class="cover-heading">Parece que todavia no hiciste ninguna receta</h1>
+    <p class="lead">Empeza a publicar tu primera receta ahora<br>
+    </p><br>
+    <div class="re">
+      <%= link_to "Receta nueva", new_recipe_path, class:'recet' %>
+    </div>
+  </main>
+</div>
+<% else %>
 <div id="todas">
   <div class="titulo">
-    <h1>Todas las Recetas </h1>
+    <h1>Mis Recetas</h1>
   </div>
-  <% @recipe.each do |f| %>
-  <div class="mostrar">
-    <ol>
-    <li class="title"><h2><%=link_to f.titulo, f, class:'tit'%></h2></li>
-    <li class="categ"><h5><%= f.category.nombre %></h5></li>
-    <li class="user"><h6><%= f.user.nombre %> <%= f.user.apellido %></h6><% if f.photo.present? %>
-    <%= image_tag f.photo.url(:thumb), style:"margin-left:50%; margin-right:auto" %>
-  <% end %></li>
-    <li class="descript"><p><%= truncate (f.descripcion), length: 5000 %></p></li>
-    </ol>
-  </div>
+    <% @recipe = User.find(current_user.id).recipes.order("created_at DESC") %>
+    <% @recipe.each do |f| %>
+    <div class="mostrar">
+      <ol>
+      <li class="title"><h2><%=link_to f.titulo, f, class:'tit'%></h2></li>
+      <li class="categ"><h5><%= f.category.nombre %></h5></li>
+      <li class="user"><h6><%= f.user.nombre %> <%= f.user.apellido %></h6><% if f.photo.present? %>
+      <%= image_tag f.photo.url(:thumb), style:"margin-left:50%; margin-right:auto" %>
+    <% end %></li>
+      <li class="descript"><p><%= truncate (f.descripcion), length: 5000 %></p></li>
+      <li class="user"><h6><%= link_to "Eliminar",recipe_path(f), :method => 'delete', data: {confirm: 'Seguro que desea eliminar la receta?'} %> &nbsp&nbsp&nbsp <%= link_to "Editar", edit_recipe_path(f) %></h6></li>
+      </ol>
+    </div>
+    <% end %>
   <% end %>
 </div>

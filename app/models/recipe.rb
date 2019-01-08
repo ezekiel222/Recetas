@@ -1,4 +1,11 @@
 class Recipe < ApplicationRecord
+  def self.search(titulo)
+  if titulo
+    where('titulo LIKE ?', "#{titulo}")
+  else
+    all
+  end
+  end
   has_many :line_items, inverse_of: :order
   belongs_to :user, required: true
   belongs_to :category, required: true
