@@ -40,6 +40,8 @@
         <% end %>
       </ol>
     </div>
+    <% if current_user %>
     <%= link_to "Añadir a Favoritos", favorite_recipe_path(@recipe, type: "favorite"), style:"padding: 3.35%", method: :put %>
+    <%end%>
   </div>
   </div>
