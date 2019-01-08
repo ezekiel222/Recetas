@@ -1,7 +1,7 @@
 class Recipe < ApplicationRecord
   def self.search(titulo)
   if titulo
-    where('titulo like ?', "%#{titulo}%")
+    where('titulo like ?', "%#{titulo.capitalize}%")
   else
     all
   end
