@@ -479,9 +479,7 @@ input[type="submit"]:hover{
   color: gray;
 }
 #todas .mostrar li.descript p{
-
   font-size: 16px;
-  font-weight: 600;
 }
 #categorias{
   text-align: center;
