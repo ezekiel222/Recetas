@@ -321,7 +321,7 @@ input[type="submit"]:hover{
   font-size: 15px
 }
 .categ{
-  padding-left: 2.35%
+  /* padding-left: 2.35% */
 }
 #receta .cuerpo a{
   width: 100%;
