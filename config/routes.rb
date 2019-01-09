@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :recipes do
+  resources :recipes, :path => 'recetas' do
     put :favorite, on: :member
   end
-  resources :categories
+  resources :categories, :path => 'categorias'
   resources :users
   devise_for :users, :controllers => {registrations:'registrations'}, :path => 'u'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
